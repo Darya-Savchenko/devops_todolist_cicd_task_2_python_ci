@@ -23,8 +23,8 @@ jobs:
     - uses: actions/checkout@v4
       name: Checkout repository
 
-    - uses: Set up Python ${{ env.PYTHON_VERSION }}
-      name: actions/setup-python@v4
+    - name: Set up Python ${{ env.PYTHON_VERSION }}
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ env.PYTHON_VERSION }}
 
