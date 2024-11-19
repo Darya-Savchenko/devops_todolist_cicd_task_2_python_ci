@@ -45,16 +45,16 @@ jobs:
         flake8 . --statistics --max-complexity=10 --exit-zero
 
     - name: Run tests
-        run: python manage.py test -v2
+      run: python manage.py test -v2
 
     - name: Generate coverage report
-        run: coverage run --source='.' manage.py test -v2
+      run: coverage run --source='.' manage.py test -v2
 
     - name: Display coverage report
-        run: coverage report
+      run: coverage report
 
     - name: Upload Python code as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: python-code
-          path: .
+      uses: actions/upload-artifact@v4
+      with:
+        name: python-code
+        path: .
